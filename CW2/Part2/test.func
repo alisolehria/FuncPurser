@@ -1,0 +1,18 @@
+function Sum (inp) returns res
+variables tmp
+begin
+	if Eq(inp,0) then
+		res := inp;
+	else
+		tmp := Sum(Minus(inp,1));
+		res := Plus(tmp,inp);
+	end if;
+end function;
+
+function Main ()
+variables inp, res
+begin
+	read inp;
+	res := Sum(inp);
+	write res;
+end function;

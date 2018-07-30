@@ -1,0 +1,220 @@
+ program
+  functions
+   function
+function 
+ID Inc
+( 
+    args
+ID x
+) 
+returns 
+ID y
+begin 
+    commands
+     command
+      assign
+ID y
+:= 
+       expr
+Plus 
+        bop
+( 
+         expr
+ID x
+, 
+         expr
+ID y
+) 
+; 
+end function 
+; 
+   functions
+    function
+function 
+ID MyTimes
+( 
+     args
+ID x
+, 
+      args
+ID y
+) 
+returns 
+ID times
+variables 
+     args
+ID i
+begin 
+     commands
+      command
+       assign
+ID times
+:= 
+        expr
+INT 0
+; 
+      commands
+       command
+        assign
+ID i
+:= 
+         expr
+INT 0
+; 
+       commands
+        command
+while 
+         while
+          condexp
+           exprs
+            expr
+Less 
+             bop
+( 
+              expr
+ID i
+, 
+              expr
+ID y
+) 
+loop 
+          commands
+           command
+            assign
+ID times
+:= 
+             expr
+Plus 
+              bop
+( 
+               expr
+ID x
+, 
+               expr
+ID times
+) 
+; 
+           commands
+            command
+             assign
+ID i
+:= 
+              expr
+ID Inc
+( 
+               exprs
+                expr
+ID i
+) 
+; 
+end loop 
+; 
+        commands
+         command
+write 
+          write
+           expr
+INT 1
+; 
+end function 
+; 
+    functions
+     function
+function 
+Main 
+( 
+) 
+variables 
+      args
+ID a
+, 
+       args
+ID b
+, 
+        args
+ID x
+, 
+         args
+ID y
+begin 
+      commands
+       command
+read 
+        read
+ID a
+; 
+       commands
+        command
+read 
+         read
+ID b
+; 
+        commands
+         command
+          assign
+ID x
+:= 
+           expr
+Times 
+            bop
+( 
+             expr
+ID a
+, 
+             expr
+ID b
+) 
+; 
+         commands
+          command
+           assign
+ID y
+:= 
+            expr
+ID MyTimes
+( 
+             exprs
+              expr
+ID a
+, 
+              exprs
+               expr
+ID b
+) 
+; 
+          commands
+           command
+if 
+            if
+             condexp
+              exprs
+               expr
+Eq 
+                bop
+( 
+                 expr
+ID x
+, 
+                 expr
+ID y
+) 
+then 
+             commands
+              command
+write 
+               write
+                expr
+INT 1
+; 
+else 
+             commands
+              command
+write 
+               write
+                expr
+INT 0
+; 
+end if 
+; 
+end function 
+; 

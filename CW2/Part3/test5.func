@@ -1,0 +1,4 @@
+function Inc(x) returns y
+begin
+y := Plus(x,1);
+end function;

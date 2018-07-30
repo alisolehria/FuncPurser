@@ -1,0 +1,15 @@
+function looper()
+variables x, y, z
+begin
+	while Less(x,y) loop
+		x := 4;
+	end loop;
+end function;
+
+function Main()
+variables x, y, z
+begin
+	if Less(x,y) then
+		x := 4;
+	end if;
+end function;
