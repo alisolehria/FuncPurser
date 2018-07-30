@@ -1,1 +1,1 @@
-These are the source files for both the courseworks for the module F29LP Language Processors. The coursework is written in C.
+These are the source files for both the courseworks for the module F29LP Language Processors. The coursework is written in C. The name of the programming language is FUNC.
